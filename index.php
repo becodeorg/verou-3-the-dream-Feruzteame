@@ -1,5 +1,6 @@
 
 <?php
+ini_set('display_errors','Off');
 // value of different currency
 $ero = 1;
 $dollar = 0.88;
@@ -12,10 +13,17 @@ $pound = 0.056;
 $value = $_GET["currency"];
 $place = $_GET["place"];
 
+
+if(empty($value)){
+    $value = 0;
+    $result = "please put some amount";
+}
+
+
 $result = "See Your Change Here.";
 
 // checking of currency
-switch ($place) {
+switch (!empty($place)) {
     case "USA":
          $result =  "You have ". $dollar * $value." dollar";
         break;
@@ -35,7 +43,7 @@ switch ($place) {
         $result =   "You have ". $pound * $value." pound";
         break;
     default:
-        echo "Please choose the place and give some amount of money";
+        $result = "Please choose the Country name and Put amount of money !";
 }
 ?>
 
@@ -48,6 +56,9 @@ switch ($place) {
         <link rel="stylesheet" href="style.css">
    </head>
       <body>
+      <div id="result">
+          <?php echo $result ?>
+      </div>
         <form action="" method="get">
             <input type="radio" id="place" name="place" value="USA"> USA
             <input type="radio" id="place" name="place" value="Europe"> Europe
@@ -55,13 +66,11 @@ switch ($place) {
             <input type="radio" id="place" name="place" value="India"> India
             <input type="radio" id="place" name="place" value="Australia"> Australia
             <input type="radio" id="place" name="place" value="Egypt"> Egypt<br>
-            <label for="currency" id="label" >currency Change</label><br><br>
+            <label for="currency" id="label" >Put amount of money</label><br><br>
             <input type="number"  name="currency" id="currency"><br>
             <input type="submit" value="Submit" id="submit">
         </form>
-      <div id="result">
-          <?php echo $result ?>
-      </div>
+
     </body>
 </html>
 
