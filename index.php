@@ -10,7 +10,7 @@ $pound = 0.056;
 
 // value of the input
 $value = $_GET["currency"];
-$place = isset($_GET["place"]) ;
+$place = $_GET["place"];
 
 $result = "See Your Change Here.";
 
