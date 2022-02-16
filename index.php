@@ -16,22 +16,22 @@ $result = "See Your Change Here.";
 // checking of currency
 switch ($place) {
     case "USA":
-         $result =  "You have ". $dollar * $value ."€" . " when your money change to EURO currency";
+         $result =  "You have ". $dollar * $value." dollar";
         break;
     case "Europe":
-        $result =   "You have ". $ero * $value ."€" . " when your money change to EURO currency";
+        $result =   "You have ". $ero * $value. " ero";
         break;
     case "South Africa":
-        $result =   "You have ". $rand * $value ."€" . " when your money change to EURO currency";
+        $result =   "You have ". $rand * $value. " rand";
         break;
     case "India":
-        $result =   "You have ". $rupee * $value ."€" . " when your money change to EURO currency";
+        $result =   "You have ". $rupee * $value. " rupee";
         break;
     case "Australia":
-        $result =   "You have ". $AUD * $value ."€" . " when your money change to EURO currency";
+        $result =   "You have ". $AUD * $value." AUD";
         break;
     case "Egypt":
-        $result =   "You have ". $pound * $value ."€" . " when your money change to EURO currency";
+        $result =   "You have ". $pound * $value." pound";
         break;
     case "" && $value == " ":
         echo "Please choose the place !";
