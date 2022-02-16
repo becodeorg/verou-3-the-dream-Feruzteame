@@ -1,0 +1,27 @@
+body{
+    background-color: aliceblue;
+    font-size: 30px;
+}
+#place{
+    margin: 10% 10px 5% 10px;
+
+}
+form{
+    margin: 20px 0 0 30%;
+}
+#currency{
+    margin: 0px;
+    width: 30%;
+    height: 40px;
+}
+#submit{
+    margin: 30px 0 0 0;
+    width: 10%;
+    height: 40px;
+}
+#label{
+    margin: 10% 0 0 0;
+}
+#result{
+    margin: 5% 0 0 50%;
+}
