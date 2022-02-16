@@ -10,7 +10,8 @@ $pound = 0.056;
 
 // value of the input
 $value = $_GET["currency"];
-$place = $_GET["place"];
+$place = isset($_GET["place"]) ;
+
 $result = "See Your Change Here.";
 
 // checking of currency
@@ -33,7 +34,7 @@ switch ($place) {
     case "Egypt":
         $result =   "You have ". $pound * $value." pound";
         break;
-    case "" :
+    default:
         echo "Please choose the place and give some amount of money";
 }
 ?>
