@@ -33,8 +33,8 @@ switch ($place) {
     case "Egypt":
         $result =   "You have ". $pound * $value." pound";
         break;
-    case "" && $value == " ":
-        echo "Please choose the place !";
+    case "" :
+        echo "Please choose the place and give some amount of money";
 }
 ?>
 
@@ -43,7 +43,7 @@ switch ($place) {
     <head>
         <meta charset="UTF-8" name="description" content="This is my personal web-site">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Contact Me</title>
+        <title>Change currency</title>
         <link rel="stylesheet" href="style.css">
    </head>
       <body>
